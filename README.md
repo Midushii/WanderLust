@@ -13,7 +13,7 @@ A full-stack travel stay-listing platform where hosts can publish properties and
 
 **🌐 [wanderlust-wtus.onrender.com](https://wanderlust-wtus.onrender.com/listings)**
 
-<img src="public/screenshots/1.png" width="860" alt="WanderLust listings page">
+<img src="public/css/1.png" width="860" alt="WanderLust listings page">
 
 <em>The WanderLust listings page</em>
 
@@ -31,7 +31,7 @@ A full-stack travel stay-listing platform where hosts can publish properties and
 6. [Technology Stack](#6-technology-stack)
 7. [Database Design](#7-database-design)
 8. [Repository Structure](#8-repository-structure)
-9. [Developers](#9-developers)
+9. [Developer](#9-developer)
 
 ---
 
@@ -102,42 +102,50 @@ WanderLust addresses this by providing:
 
 ### 4.1 Explore Listings
 
-The home page displays every listing as a card with its image, title and price. A search bar and category filter strip sit at the top, and the **Total after taxes** switch shows prices with 18% GST.
+The home page displays every listing as a card with its image, title and price. A search bar and a category filter strip sit at the top.
 
 <p align="center">
-  <img src="public/screenshots/1.png" width="860" alt="Explore listings">
+  <img src="public/css/1.png" width="860" alt="Explore listings">
 </p>
 
-### 4.2 Listing Details
+### 4.2 Total After Taxes
 
-Each listing page shows the full description, owner, location, price and reviews. Owners see **Edit** and **Delete** buttons.
+Switching on **Total after taxes** reveals the 18% GST on every listing price.
 
 <p align="center">
-  <img src="public/screenshots/2.png" width="860" alt="Listing details">
+  <img src="public/css/2.png" width="860" alt="Total after taxes toggle">
 </p>
 
-### 4.3 Reviews & Ratings
+### 4.3 Listing Details
 
-Logged-in users can leave a star rating and comment. All reviews are listed beneath the listing with the author's username.
+Each listing page shows the image, owner, description, price and location. Owners also see **Edit** and **Delete** buttons.
 
 <p align="center">
-  <img src="public/screenshots/3.png" width="860" alt="Reviews and ratings">
+  <img src="public/css/4.png" width="860" alt="Listing details">
 </p>
 
-### 4.4 Create a New Listing
+### 4.4 Reviews & Ratings
 
-Hosts fill in the title, description, category, price, country, location and upload an image. Validation runs on both client and server.
+Logged-in users can leave a star rating and a comment. All reviews appear beneath the listing with the author's username, and only the author can delete their own review.
 
 <p align="center">
-  <img src="public/screenshots/4.png" width="860" alt="Create new listing">
+  <img src="public/css/5.png" width="600" alt="Reviews and ratings">
 </p>
 
-### 4.5 Login & Signup
+### 4.5 Create a New Listing
 
-Secure account creation and login, with flash messages for feedback.
+Hosts fill in the title, category, description, price, country and location, and upload an image. Validation runs on both the client and the server.
 
 <p align="center">
-  <img src="public/screenshots/5.png" width="860" alt="Login and signup">
+  <img src="public/css/6.png" width="860" alt="Create new listing">
+</p>
+
+### 4.6 Signup
+
+Secure account creation with username, email and password. Login follows the same layout.
+
+<p align="center">
+  <img src="public/css/8.png" width="860" alt="Signup page">
 </p>
 
 ---
@@ -170,6 +178,7 @@ WanderLust follows the **MVC (Model–View–Controller)** pattern with server-s
 3. The controller reads or writes data through **Mongoose** models.
 4. Images are uploaded to **Cloudinary** through Multer.
 5. An **EJS** view (with the shared boilerplate layout) renders the HTML response.
+
 
 ## 6. Technology Stack
 
@@ -242,9 +251,8 @@ WanderLust/
 │   └── error.ejs
 │
 ├── public/
-│   ├── css/                  style.css, rating.css (star ratings)
-│   ├── js/                   script.js, map.js
-│   └── screenshots/          README images
+│   ├── css/                  style.css, rating.css and README screenshots
+│   └── js/                   script.js, map.js
 │
 ├── init/
 │   ├── index.js              Database seeding script
